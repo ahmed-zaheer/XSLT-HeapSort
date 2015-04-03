@@ -1,0 +1,22 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="heap" type="max"/>
+    <xs:complexType name="max">
+        <xs:sequence>
+            <xs:element ref="heap" minOccurs="0" maxOccurs="2"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="node-attr"/>
+        <xs:assert test="number(@value) &lt; number(../@value) or not(@output)"/>
+    </xs:complexType>
+    <xs:complexType name="min">
+        <xs:sequence>
+            <xs:element ref="heap" minOccurs="0" maxOccurs="2"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="node-attr"/>
+        <xs:assert test="number(@value) &gt; number(../@value) or not(@output)"/>
+    </xs:complexType>
+    <xs:attributeGroup name="node-attr">
+        <xs:attribute name="index" type="xs:integer"/>
+        <xs:attribute name="value" type="xs:integer"/>
+    </xs:attributeGroup>
+</xs:schema>

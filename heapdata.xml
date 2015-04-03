@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<heap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:math="http://exslt.org/math"
+    xsi:noNamespaceSchemaLocation="heapdata.xsd"
+    index="1"
+    value="1">
+    <heap index="2" value="7">
+        <heap index="4" value="6">
+            <heap index="8" value="4"/>
+            <heap index="9" value="-1"/>
+        </heap>
+        <heap index="5" value="2"/>
+    </heap>
+    <heap index="3" value="3">
+        <heap index="6" value="5"/>
+        <heap index="7" value="0"/>
+    </heap>
+</heap>
